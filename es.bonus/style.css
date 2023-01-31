@@ -1,3 +1,12 @@
 .container{
-    background-color: rgb(188, 188, 54);
+    background-color: rgba(0, 0, 0, 0.588);
+}
+.list-group-flush>.list-group-item {
+    background-color: rgba(254, 245, 245, 0.761);
+    
+}
+.card>.list-group+.card-footer {
+    background-color: rgba(241, 235, 235, 0.761);
+    
+
 }
