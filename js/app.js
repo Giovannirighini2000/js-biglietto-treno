@@ -5,6 +5,8 @@ console.log('Costo del biglietto del treno:')
 //******CHIEDERE KM DEL VIAGGGIO*****
 const kmDelViaggio = parseInt(prompt('inserisci i km del tuo viaggio in treno: '))
 console.log(kmDelViaggio)
+const kmViaggio = document.getElementById('Km')
+kmViaggio.innerHTML = kmDelViaggio
 
 if (isNaN(kmDelViaggio)){
        alert("Hai digitato un carattere devi inserire i km");
@@ -14,6 +16,8 @@ if (isNaN(kmDelViaggio)){
 //****CHIEDERE NOME E COGNOME DEL PASSEGGERO ****/
 const nomeCognomeDelPasseggero = prompt('inserisci il tuo nome e cognome:')
 console.log(nomeCognomeDelPasseggero)
+const personaNC = document.getElementById('nome')
+personaNC.innerHTML = nomeCognomeDelPasseggero
 
 
 //*** COSTO BASE DEL BIGLETTO******/
@@ -26,15 +30,17 @@ const etaDelViaggiatore = parseInt(prompt('inserisci la tua età:'))
 if (etaDelViaggiatore <18 ){
     let minorenne = biglettoDelTreno * 0.8
     console.log(minorenne.toFixed(2)) 
-    
+    const PrezzoTot = document.getElementById('Costo')
+    PrezzoTot.innerHTML = minorenne
     
 }
-
 
 
 if  (etaDelViaggiatore  >65) {
     let overSessantaCinque = biglettoDelTreno * 0.6
   console.log(overSessantaCinque.toFixed(2))
+  const PrezzoTot = document.getElementById('Costo')
+    PrezzoTot.innerHTML = overSessantaCinque
 }
 
 
