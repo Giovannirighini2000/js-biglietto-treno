@@ -16,6 +16,7 @@ if (isNaN(kmDelViaggio)){
 //****CHIEDERE NOME E COGNOME DEL PASSEGGERO ****/
 const nomeCognomeDelPasseggero = prompt('inserisci il tuo nome e cognome:')
 console.log(nomeCognomeDelPasseggero)
+
 const personaNC = document.getElementById('nome')
 personaNC.innerHTML = nomeCognomeDelPasseggero
 
@@ -24,23 +25,35 @@ personaNC.innerHTML = nomeCognomeDelPasseggero
 const biglettoDelTreno  = (0.21*kmDelViaggio)
 console.log(biglettoDelTreno)
 
+const prezzoStandard = document.getElementById('prezzo')
+prezzoStandard.innerHTML = biglettoDelTreno
+
 //**ETA DEL PASSEGGERO+SCONTO = prezzo totale scontato in base all'eta*/
 const etaDelViaggiatore = parseInt(prompt('inserisci la tua età:'))
 
 if (etaDelViaggiatore <18 ){
-    let minorenne = biglettoDelTreno * 0.8
+    let minorenne = biglettoDelTreno / 100 * 20
     console.log(minorenne.toFixed(2)) 
+    let prezzoTotale = biglettoDelTreno - minorenne
+    console.log(prezzoTotale)
     const PrezzoTot = document.getElementById('Costo')
-    PrezzoTot.innerHTML = minorenne.toFixed(2)
+    PrezzoTot.innerHTML = prezzoTotale.toFixed(2)
     
+}
+if ('Prezzo scontato non disponibile'){
+    const PrezzoTot = document.getElementById('Costo')
+    PrezzoTot.innerHTML = ('Prezzo scontato non disponibile')
 }
 
 
 if  (etaDelViaggiatore  >65) {
-    let overSessantaCinque = biglettoDelTreno * 0.6
-  console.log(overSessantaCinque.toFixed(2))
-  const PrezzoTot = document.getElementById('Costo')
-    PrezzoTot.innerHTML = overSessantaCinque.toFixed(2)
+    let overSessantaCinque = biglettoDelTreno / 100 * 20
+    console.log(overSessantaCinque.toFixed(2))
+    let prezzoTotaleHigh = biglettoDelTreno - overSessantaCinque
+    console.log(prezzoTotaleHigh)
+
+    const PrezzoTot = document.getElementById('Costo')
+    PrezzoTot.innerHTML = prezzoTotaleHigh.toFixed(2)
 }
 
 
