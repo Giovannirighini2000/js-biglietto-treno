@@ -31,7 +31,7 @@ if (etaDelViaggiatore <18 ){
     let minorenne = biglettoDelTreno * 0.8
     console.log(minorenne.toFixed(2)) 
     const PrezzoTot = document.getElementById('Costo')
-    PrezzoTot.innerHTML = minorenne
+    PrezzoTot.innerHTML = minorenne.toFixed(2)
     
 }
 
@@ -40,7 +40,7 @@ if  (etaDelViaggiatore  >65) {
     let overSessantaCinque = biglettoDelTreno * 0.6
   console.log(overSessantaCinque.toFixed(2))
   const PrezzoTot = document.getElementById('Costo')
-    PrezzoTot.innerHTML = overSessantaCinque
+    PrezzoTot.innerHTML = overSessantaCinque.toFixed(2)
 }
 
 
