@@ -14,7 +14,9 @@ if (isNaN(kmDelViaggio)){
 
 
 //****CHIEDERE NOME E COGNOME DEL PASSEGGERO ****/
-const nomeCognomeDelPasseggero = prompt('inserisci il tuo nome e cognome:')
+const nome = prompt('Quale il tuo nome?')
+const cognome = prompt('Quale il tuo cognome?')
+const nomeCognomeDelPasseggero = nome +(' ')+ cognome
 console.log(nomeCognomeDelPasseggero)
 
 const personaNC = document.getElementById('nome')
@@ -55,7 +57,9 @@ if  (etaDelViaggiatore  >65) {
     const PrezzoTot = document.getElementById('Costo')
     PrezzoTot.innerHTML = prezzoTotaleHigh.toFixed(2)
 }
-
+if (isNaN(etaDelViaggiatore)){
+    alert("Hai digitato un carattere devi inserire la tua età");
+ }
 
 
 
