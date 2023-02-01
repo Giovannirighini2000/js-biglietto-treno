@@ -42,10 +42,10 @@ if (etaDelViaggiatore <18 ){
     PrezzoTot.innerHTML = prezzoTotale.toFixed(2)
     
 }
-if ('Prezzo scontato non disponibile'){
-    const PrezzoTot = document.getElementById('Costo')
-    PrezzoTot.innerHTML = ('Prezzo scontato non disponibile')
-}
+// if ('Prezzo scontato non disponibile'){
+    // const PrezzoTot = document.getElementById('Costo')
+    // PrezzoTot.innerHTML = ('Prezzo scontato non disponibile')
+// }
 
 
 if  (etaDelViaggiatore  >65) {
